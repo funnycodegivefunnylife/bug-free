@@ -1,6 +1,5 @@
 plugins {
-    id 'java'
-    id 'org.springframework.boot' version '3.5.3'
+    id 'java-library'
     id 'io.spring.dependency-management' version '1.1.7'
 }
 
@@ -15,6 +14,12 @@ java {
 
 repositories {
     mavenCentral()
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.boot:spring-boot-dependencies:3.5.3'
+    }
 }
 
 dependencies {
@@ -40,7 +45,12 @@ dependencies {
     // starter database dependencies
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     runtimeOnly 'org.postgresql:postgresql'
+
+    // logging dependencies
+    implementation 'org.slf4j:slf4j-api:2.0.13'
+    implementation 'ch.qos.logback:logback-classic:1.4.14'
 }
+
 
 tasks.named('test') {
     useJUnitPlatform()

@@ -1,10 +1,13 @@
 package bugfree.challenge.domain.kafka;
 
 import bugfree.challenge.domain.kafka.data.KafkaEventData;
+import bugfree.challenge.shared.parser.JacksonParser;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.Optional;
 
 public interface BaseKafkaConsumer<T extends KafkaEventData> {
+
 
 
     BaseKafkaProcessor<T> getProcessor();
@@ -21,8 +24,16 @@ public interface BaseKafkaConsumer<T extends KafkaEventData> {
      */
     void afterProcess(T eventData);
 
+    Class<T> getEventDataClass();
+
     default Optional<T> parseMessage(String message) {
-        return Optional.ofNullable(getProcessor().getEventData(message));
+        try {
+            T data = JacksonParser.fromJson(message, getEventDataClass());
+            return Optional.ofNullable(data);
+        } catch (Exception e) {
+        }
+
+        return Optional.empty();
     }
 
     default void consume(String message) {

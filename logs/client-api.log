@@ -1,0 +1,107 @@
+2025-06-29 11:04:30 [main] INFO  bugfree.challenge.client_api.MainApplication [request_id=] - Starting MainApplication using Java 17.0.12 with PID 25840 (/Users/lap15723/Desktop/bug-free/client-api/build/classes/java/main started by lap15723 in /Users/lap15723/Desktop/bug-free)
+2025-06-29 11:04:30 [main] DEBUG bugfree.challenge.client_api.MainApplication [request_id=] - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-06-29 11:04:30 [main] INFO  bugfree.challenge.client_api.MainApplication [request_id=] - No active profile set, falling back to 1 default profile: "default"
+2025-06-29 11:04:31 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [request_id=] - Tomcat initialized with port 8080 (http)
+2025-06-29 11:04:31 [main] INFO  o.a.catalina.core.StandardService [request_id=] - Starting service [Tomcat]
+2025-06-29 11:04:31 [main] INFO  o.a.catalina.core.StandardEngine [request_id=] - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-06-29 11:04:31 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [request_id=] - Initializing Spring embedded WebApplicationContext
+2025-06-29 11:04:31 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [request_id=] - Root WebApplicationContext: initialization completed in 749 ms
+2025-06-29 11:04:31 [main] DEBUG b.c.shared.filter.RequestIdFilter [request_id=] - Filter 'requestIdFilter' configured for use
+2025-06-29 11:04:31 [main] DEBUG bugfree.challenge.client_api.JwtFilter [request_id=] - Filter 'jwtFilter' configured for use
+2025-06-29 11:04:31 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean [request_id=] - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-29 11:04:32 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [request_id=] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-06-29 11:04:32 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger [request_id=] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-29 11:04:32 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter [request_id=] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-06-29 11:04:48 [main] INFO  bugfree.challenge.client_api.MainApplication [request_id=] - Starting MainApplication using Java 17.0.12 with PID 25992 (/Users/lap15723/Desktop/bug-free/client-api/build/classes/java/main started by lap15723 in /Users/lap15723/Desktop/bug-free)
+2025-06-29 11:04:48 [main] DEBUG bugfree.challenge.client_api.MainApplication [request_id=] - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-06-29 11:04:48 [main] INFO  bugfree.challenge.client_api.MainApplication [request_id=] - No active profile set, falling back to 1 default profile: "default"
+2025-06-29 11:04:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [request_id=] - Tomcat initialized with port 8080 (http)
+2025-06-29 11:04:48 [main] INFO  o.a.catalina.core.StandardService [request_id=] - Starting service [Tomcat]
+2025-06-29 11:04:48 [main] INFO  o.a.catalina.core.StandardEngine [request_id=] - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-06-29 11:04:48 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [request_id=] - Initializing Spring embedded WebApplicationContext
+2025-06-29 11:04:48 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [request_id=] - Root WebApplicationContext: initialization completed in 610 ms
+2025-06-29 11:04:48 [main] DEBUG b.c.shared.filter.RequestIdFilter [request_id=] - Filter 'requestIdFilter' configured for use
+2025-06-29 11:04:48 [main] DEBUG bugfree.challenge.client_api.JwtFilter [request_id=] - Filter 'jwtFilter' configured for use
+2025-06-29 11:04:49 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean [request_id=] - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-29 11:04:49 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [request_id=] - Tomcat started on port 8080 (http) with context path '/'
+2025-06-29 11:04:49 [main] INFO  bugfree.challenge.client_api.MainApplication [request_id=] - Started MainApplication in 1.278 seconds (process running for 1.537)
+2025-06-29 11:04:55 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [request_id=] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-29 11:04:55 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet [request_id=] - Initializing Servlet 'dispatcherServlet'
+2025-06-29 11:04:55 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet [request_id=] - Completed initialization in 1 ms
+2025-06-29 11:04:55 [http-nio-8080-exec-1] DEBUG bugfree.challenge.client_api.JwtFilter [request_id=53586c3b-ddb1-4796-878f-5090df22b1cd] - Processing JWT authentication for request: /swagger-ui/swagger-ui/index.html
+2025-06-29 11:04:56 [http-nio-8080-exec-1] DEBUG b.c.s.interceptor.MDCInterceptor [request_id=53586c3b-ddb1-4796-878f-5090df22b1cd] - Processing request: GET /swagger-ui/swagger-ui/index.html with request ID: 53586c3b-ddb1-4796-878f-5090df22b1cd
+2025-06-29 11:05:00 [http-nio-8080-exec-2] DEBUG bugfree.challenge.client_api.JwtFilter [request_id=4193c2e7-f335-4ecc-a1e8-23d361667c99] - Processing JWT authentication for request: /swagger-ui/index.html
+2025-06-29 11:05:00 [http-nio-8080-exec-2] DEBUG b.c.s.interceptor.MDCInterceptor [request_id=4193c2e7-f335-4ecc-a1e8-23d361667c99] - Processing request: GET /swagger-ui/index.html with request ID: 4193c2e7-f335-4ecc-a1e8-23d361667c99
+2025-06-29 11:05:00 [http-nio-8080-exec-2] DEBUG b.c.s.interceptor.MDCInterceptor [request_id=4193c2e7-f335-4ecc-a1e8-23d361667c99] - Completed processing request: GET /swagger-ui/index.html with request ID: 4193c2e7-f335-4ecc-a1e8-23d361667c99
+2025-06-29 11:05:00 [http-nio-8080-exec-3] DEBUG bugfree.challenge.client_api.JwtFilter [request_id=6e91382a-483a-462b-8c88-9707ebcecd84] - Processing JWT authentication for request: /swagger-ui/index.css
+2025-06-29 11:05:00 [http-nio-8080-exec-4] DEBUG bugfree.challenge.client_api.JwtFilter [request_id=0cbafb4f-341c-4adb-bbee-6bbff6c6c401] - Processing JWT authentication for request: /swagger-ui/swagger-ui.css
+2025-06-29 11:05:00 [http-nio-8080-exec-3] DEBUG b.c.s.interceptor.MDCInterceptor [request_id=6e91382a-483a-462b-8c88-9707ebcecd84] - Processing request: GET /swagger-ui/index.css with request ID: 6e91382a-483a-462b-8c88-9707ebcecd84
+2025-06-29 11:05:00 [http-nio-8080-exec-4] DEBUG b.c.s.interceptor.MDCInterceptor [request_id=0cbafb4f-341c-4adb-bbee-6bbff6c6c401] - Processing request: GET /swagger-ui/swagger-ui.css with request ID: 0cbafb4f-341c-4adb-bbee-6bbff6c6c401
+2025-06-29 11:05:00 [http-nio-8080-exec-7] DEBUG bugfree.challenge.client_api.JwtFilter [request_id=f7f060eb-f5ab-4733-971e-0565295b2de8] - Processing JWT authentication for request: /swagger-ui/swagger-ui-bundle.js
+2025-06-29 11:05:00 [http-nio-8080-exec-3] DEBUG b.c.s.interceptor.MDCInterceptor [request_id=6e91382a-483a-462b-8c88-9707ebcecd84] - Completed processing request: GET /swagger-ui/index.css with request ID: 6e91382a-483a-462b-8c88-9707ebcecd84
+2025-06-29 11:05:00 [http-nio-8080-exec-7] DEBUG b.c.s.interceptor.MDCInterceptor [request_id=f7f060eb-f5ab-4733-971e-0565295b2de8] - Processing request: GET /swagger-ui/swagger-ui-bundle.js with request ID: f7f060eb-f5ab-4733-971e-0565295b2de8
+2025-06-29 11:05:00 [http-nio-8080-exec-6] DEBUG bugfree.challenge.client_api.JwtFilter [request_id=6c8794e6-8a3e-4cbc-92e2-823de49c98e7] - Processing JWT authentication for request: /swagger-ui/swagger-initializer.js
+2025-06-29 11:05:00 [http-nio-8080-exec-6] DEBUG b.c.s.interceptor.MDCInterceptor [request_id=6c8794e6-8a3e-4cbc-92e2-823de49c98e7] - Processing request: GET /swagger-ui/swagger-initializer.js with request ID: 6c8794e6-8a3e-4cbc-92e2-823de49c98e7
+2025-06-29 11:05:00 [http-nio-8080-exec-4] DEBUG b.c.s.interceptor.MDCInterceptor [request_id=0cbafb4f-341c-4adb-bbee-6bbff6c6c401] - Completed processing request: GET /swagger-ui/swagger-ui.css with request ID: 0cbafb4f-341c-4adb-bbee-6bbff6c6c401
+2025-06-29 11:05:00 [http-nio-8080-exec-5] DEBUG bugfree.challenge.client_api.JwtFilter [request_id=90b9ddd7-e27f-448a-9bbd-ada44bd0ed54] - Processing JWT authentication for request: /swagger-ui/swagger-ui-standalone-preset.js
+2025-06-29 11:05:00 [http-nio-8080-exec-5] DEBUG b.c.s.interceptor.MDCInterceptor [request_id=90b9ddd7-e27f-448a-9bbd-ada44bd0ed54] - Processing request: GET /swagger-ui/swagger-ui-standalone-preset.js with request ID: 90b9ddd7-e27f-448a-9bbd-ada44bd0ed54
+2025-06-29 11:05:00 [http-nio-8080-exec-5] DEBUG b.c.s.interceptor.MDCInterceptor [request_id=90b9ddd7-e27f-448a-9bbd-ada44bd0ed54] - Completed processing request: GET /swagger-ui/swagger-ui-standalone-preset.js with request ID: 90b9ddd7-e27f-448a-9bbd-ada44bd0ed54
+2025-06-29 11:05:00 [http-nio-8080-exec-7] DEBUG b.c.s.interceptor.MDCInterceptor [request_id=f7f060eb-f5ab-4733-971e-0565295b2de8] - Completed processing request: GET /swagger-ui/swagger-ui-bundle.js with request ID: f7f060eb-f5ab-4733-971e-0565295b2de8
+2025-06-29 11:05:00 [http-nio-8080-exec-6] DEBUG b.c.s.interceptor.MDCInterceptor [request_id=6c8794e6-8a3e-4cbc-92e2-823de49c98e7] - Completed processing request: GET /swagger-ui/swagger-initializer.js with request ID: 6c8794e6-8a3e-4cbc-92e2-823de49c98e7
+2025-06-29 11:05:00 [http-nio-8080-exec-8] DEBUG bugfree.challenge.client_api.JwtFilter [request_id=329760b7-71fe-4f23-a41f-7107ed277dd2] - Processing JWT authentication for request: /v3/api-docs/swagger-config
+2025-06-29 11:05:00 [http-nio-8080-exec-8] DEBUG b.c.s.interceptor.MDCInterceptor [request_id=329760b7-71fe-4f23-a41f-7107ed277dd2] - Processing request: GET /v3/api-docs/swagger-config with request ID: 329760b7-71fe-4f23-a41f-7107ed277dd2
+2025-06-29 11:05:00 [http-nio-8080-exec-9] DEBUG bugfree.challenge.client_api.JwtFilter [request_id=bcc91c34-d445-4928-b907-41131ae66d6c] - Processing JWT authentication for request: /swagger-ui/favicon-32x32.png
+2025-06-29 11:05:00 [http-nio-8080-exec-9] DEBUG b.c.s.interceptor.MDCInterceptor [request_id=bcc91c34-d445-4928-b907-41131ae66d6c] - Processing request: GET /swagger-ui/favicon-32x32.png with request ID: bcc91c34-d445-4928-b907-41131ae66d6c
+2025-06-29 11:05:00 [http-nio-8080-exec-9] DEBUG b.c.s.interceptor.MDCInterceptor [request_id=bcc91c34-d445-4928-b907-41131ae66d6c] - Completed processing request: GET /swagger-ui/favicon-32x32.png with request ID: bcc91c34-d445-4928-b907-41131ae66d6c
+2025-06-29 11:05:00 [http-nio-8080-exec-8] DEBUG b.c.s.interceptor.MDCInterceptor [request_id=329760b7-71fe-4f23-a41f-7107ed277dd2] - Completed processing request: GET /v3/api-docs/swagger-config with request ID: 329760b7-71fe-4f23-a41f-7107ed277dd2
+2025-06-29 11:05:00 [http-nio-8080-exec-10] DEBUG bugfree.challenge.client_api.JwtFilter [request_id=fcdce66c-f32f-4b61-8bbe-f494a3a43d72] - Processing JWT authentication for request: /v3/api-docs/public
+2025-06-29 11:05:00 [http-nio-8080-exec-10] DEBUG b.c.s.interceptor.MDCInterceptor [request_id=fcdce66c-f32f-4b61-8bbe-f494a3a43d72] - Processing request: GET /v3/api-docs/public with request ID: fcdce66c-f32f-4b61-8bbe-f494a3a43d72
+2025-06-29 11:05:01 [http-nio-8080-exec-10] INFO  o.s.api.AbstractOpenApiResource [request_id=fcdce66c-f32f-4b61-8bbe-f494a3a43d72] - Init duration for springdoc-openapi is: 98 ms
+2025-06-29 11:05:01 [http-nio-8080-exec-10] DEBUG b.c.s.interceptor.MDCInterceptor [request_id=fcdce66c-f32f-4b61-8bbe-f494a3a43d72] - Completed processing request: GET /v3/api-docs/public with request ID: fcdce66c-f32f-4b61-8bbe-f494a3a43d72
+2025-06-29 11:05:08 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown [request_id=] - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-29 11:05:08 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown [request_id=] - Graceful shutdown complete
+2025-06-29 11:06:47 [main] INFO  b.c.client_api.MainApplication [request_id=] - Starting MainApplication using Java 17.0.12 with PID 26175 (/Users/lap15723/Desktop/bug-free/client-api/build/classes/java/main started by lap15723 in /Users/lap15723/Desktop/bug-free)
+2025-06-29 11:06:47 [main] DEBUG b.c.client_api.MainApplication [request_id=] - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-06-29 11:06:47 [main] INFO  b.c.client_api.MainApplication [request_id=] - No active profile set, falling back to 1 default profile: "default"
+2025-06-29 11:06:49 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [request_id=] - Tomcat initialized with port 8080 (http)
+2025-06-29 11:06:49 [main] INFO  o.a.catalina.core.StandardService [request_id=] - Starting service [Tomcat]
+2025-06-29 11:06:49 [main] INFO  o.a.catalina.core.StandardEngine [request_id=] - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-06-29 11:06:49 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [request_id=] - Initializing Spring embedded WebApplicationContext
+2025-06-29 11:06:49 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [request_id=] - Root WebApplicationContext: initialization completed in 1096 ms
+2025-06-29 11:06:49 [main] DEBUG b.c.shared.filter.RequestIdFilter [request_id=] - Filter 'requestIdFilter' configured for use
+2025-06-29 11:06:49 [main] DEBUG b.challenge.client_api.JwtFilter [request_id=] - Filter 'jwtFilter' configured for use
+2025-06-29 11:06:49 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean [request_id=] - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-29 11:06:49 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [request_id=] - Tomcat started on port 8080 (http) with context path '/'
+2025-06-29 11:06:49 [main] INFO  b.c.client_api.MainApplication [request_id=] - Started MainApplication in 2.237 seconds (process running for 2.57)
+2025-06-29 11:07:00 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown [request_id=] - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-29 11:07:00 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown [request_id=] - Graceful shutdown complete
+2025-06-29 11:07:02 [main] INFO  b.c.client_api.MainApplication [request_id=] - Starting MainApplication using Java 17.0.12 with PID 26253 (/Users/lap15723/Desktop/bug-free/client-api/build/classes/java/main started by lap15723 in /Users/lap15723/Desktop/bug-free)
+2025-06-29 11:07:02 [main] DEBUG b.c.client_api.MainApplication [request_id=] - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-06-29 11:07:02 [main] INFO  b.c.client_api.MainApplication [request_id=] - No active profile set, falling back to 1 default profile: "default"
+2025-06-29 11:07:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [request_id=] - Tomcat initialized with port 8080 (http)
+2025-06-29 11:07:03 [main] INFO  o.a.catalina.core.StandardService [request_id=] - Starting service [Tomcat]
+2025-06-29 11:07:03 [main] INFO  o.a.catalina.core.StandardEngine [request_id=] - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-06-29 11:07:03 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [request_id=] - Initializing Spring embedded WebApplicationContext
+2025-06-29 11:07:03 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [request_id=] - Root WebApplicationContext: initialization completed in 636 ms
+2025-06-29 11:07:03 [main] DEBUG b.c.shared.filter.RequestIdFilter [request_id=] - Filter 'requestIdFilter' configured for use
+2025-06-29 11:07:03 [main] DEBUG b.challenge.client_api.JwtFilter [request_id=] - Filter 'jwtFilter' configured for use
+2025-06-29 11:07:03 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean [request_id=] - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-29 11:07:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [request_id=] - Tomcat started on port 8080 (http) with context path '/'
+2025-06-29 11:07:03 [main] INFO  b.c.client_api.MainApplication [request_id=] - Started MainApplication in 1.273 seconds (process running for 1.496)
+2025-06-29 11:07:06 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown [request_id=] - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-29 11:07:06 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown [request_id=] - Graceful shutdown complete
