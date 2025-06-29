@@ -1,3 +1,6 @@
 rootProject.name = 'bugfree'
 
 include 'client-api'
+include 'notification'
+include 'domain'
+include 'infrastructure'
