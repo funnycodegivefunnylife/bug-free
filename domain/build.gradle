@@ -22,7 +22,7 @@ task prepareKotlinBuildScriptModel {
 }
 
 dependencies {
-    // Remove infrastructure dependency - domain should not depend on infrastructure
+
     implementation project(':shared')
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'com.fasterxml.jackson.core:jackson-databind'
@@ -30,6 +30,9 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // validation
+    implementation 'jakarta.validation:jakarta.validation-api:3.0.2'
 }
 
 

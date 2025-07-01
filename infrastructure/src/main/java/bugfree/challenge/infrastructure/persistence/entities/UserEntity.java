@@ -1,11 +1,12 @@
 package bugfree.challenge.infrastructure.persistence.entities;
 
+import bugfree.challenge.domain.entities.idclasses.UserId;
 import bugfree.challenge.domain.entities.UserStatus;
+import bugfree.challenge.infrastructure.persistence.entities.converter.UserIdConverter;
 import jakarta.persistence.*;
-import org.hibernate.annotations.CreationTimestamp;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.SQLRestriction;
-import org.hibernate.annotations.UpdateTimestamp;
-import org.hibernate.annotations.Where;
 
 import java.time.LocalDateTime;
 
@@ -15,11 +16,14 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "users")
 @SQLRestriction("status <> 'DELETED'")
+@Getter
+@Setter
 public class UserEntity {
     
     @Id
-    private String id;
-    
+    @Convert(converter = UserIdConverter.class)
+    private UserId id;
+
     @Column(unique = true, nullable = false)
     private String email;
     
@@ -36,39 +40,30 @@ public class UserEntity {
     @Column(nullable = false)
     private UserStatus status;
     
-    @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
     
-    @UpdateTimestamp
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
+
+
+    @PrePersist
+    protected void onCreate() {
+        LocalDateTime now = LocalDateTime.now();
+        if (createdAt == null) {
+            createdAt = now;
+        }
+
+        if (updatedAt == null) {
+            updatedAt = now;
+        }
+
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
+        updatedAt = LocalDateTime.now();
+    }
     
-    // Default constructor for JPA
-    public UserEntity() {}
-    
-    // Getters and setters
-    public String getId() { return id; }
-    public void setId(String id) { this.id = id; }
-    
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
-    
-    public String getFirstName() { return firstName; }
-    public void setFirstName(String firstName) { this.firstName = firstName; }
-    
-    public String getLastName() { return lastName; }
-    public void setLastName(String lastName) { this.lastName = lastName; }
-    
-    public String getPassword() { return password; }
-    public void setPassword(String password) { this.password = password; }
-    
-    public UserStatus getStatus() { return status; }
-    public void setStatus(UserStatus status) { this.status = status; }
-    
-    public LocalDateTime getCreatedAt() { return createdAt; }
-    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
-    
-    public LocalDateTime getUpdatedAt() { return updatedAt; }
-    public void setUpdatedAt(LocalDateTime updatedAt) { this.updatedAt = updatedAt; }
 }
+

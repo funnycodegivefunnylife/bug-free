@@ -1,5 +1,7 @@
 package bugfree.challenge.domain.entities;
 
+import bugfree.challenge.domain.entities.idclasses.UserId;
+
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -7,7 +9,7 @@ import java.util.Objects;
  * User domain entity representing the core business concept of a user
  */
 public class User {
-    private final String id;
+    private final UserId id;
     private final String email;
     private final String firstName;
     private final String lastName;
@@ -16,7 +18,7 @@ public class User {
     private final LocalDateTime createdAt;
     private final LocalDateTime updatedAt;
 
-    public User(String id, String email, String firstName, String lastName, 
+    public User(UserId id, String email, String firstName, String lastName,
                 String password, UserStatus status, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = Objects.requireNonNull(id, "User ID cannot be null");
         this.email = Objects.requireNonNull(email, "Email cannot be null");
@@ -57,7 +59,7 @@ public class User {
     }
 
     // Getters
-    public String getId() { return id; }
+    public UserId getId() { return id; }
     public String getEmail() { return email; }
     public String getFirstName() { return firstName; }
     public String getLastName() { return lastName; }
