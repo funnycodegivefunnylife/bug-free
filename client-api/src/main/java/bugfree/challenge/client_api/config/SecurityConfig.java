@@ -27,13 +27,15 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
-                // Public endpoints
+                // Public endpoints - allow all for testing
                 .requestMatchers(
-                    "/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**", "/api/auth/**"
+                    "/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**", 
+                    "/api/auth/**", "/api/users/**", "/h2-console/**"
                 ).permitAll()
-                // All other endpoints require authentication
-                .anyRequest().authenticated()
+                // All other endpoints require authentication (disabled for now)
+                .anyRequest().permitAll()
             )
+            .headers(headers -> headers.frameOptions().disable()) // For H2 console
             .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }

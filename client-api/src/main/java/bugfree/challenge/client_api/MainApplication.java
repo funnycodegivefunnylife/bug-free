@@ -2,20 +2,18 @@ package bugfree.challenge.client_api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration;
 import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication(
-	scanBasePackages = {"bugfree.challenge", "bugfree.challenge.shared"},
+	scanBasePackages = {"bugfree.challenge"},
 	exclude = {
-		DataSourceAutoConfiguration.class,
-		HibernateJpaAutoConfiguration.class,
-		JpaRepositoriesAutoConfiguration.class,
 		RedisAutoConfiguration.class
 	}
 )
+@EnableJpaRepositories(basePackages = "bugfree.challenge.infrastructure.persistence.jpa")
+@EntityScan(basePackages = "bugfree.challenge.infrastructure.persistence.entities")
 public class MainApplication {
 
 	public static void main(String[] args) {
