@@ -3,11 +3,11 @@ package bugfree.challenge.notification;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = {"bugfree.challenge.notification", "bugfree.challenge.shared"})
+@SpringBootApplication(
+    scanBasePackages = {"bugfree.challenge.notification", "bugfree.challenge.shared"})
 public class NotificationApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(NotificationApplication.class, args);
-    }
-
+  public static void main(String[] args) {
+    SpringApplication.run(NotificationApplication.class, args);
+  }
 }

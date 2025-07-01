@@ -1,5 +1,6 @@
 plugins {
 	id 'java'
+	id 'com.diffplug.spotless' version '6.25.0'
 }
 
 group = 'bugfree.challenge'
@@ -13,6 +14,36 @@ java {
 
 repositories {
 	mavenCentral()
+}
+
+// Configure Spotless for all subprojects
+subprojects {
+	apply plugin: 'com.diffplug.spotless'
+
+	spotless {
+		java {
+			// Use Google Java Format
+			googleJavaFormat('1.17.0')
+
+			// Remove unused imports
+			removeUnusedImports()
+
+			// Format imports
+			importOrder('java', 'javax', 'jakarta', 'org', 'com', '')
+
+			// Ensure newline at end of file
+			endWithNewline()
+
+			// Target all Java files
+			target 'src/main/java/**/*.java', 'src/test/java/**/*.java'
+		}
+
+		// Format build.gradle files
+		groovyGradle {
+			target '*.gradle'
+			greclipse()
+		}
+	}
 }
 
 // Root project has no dependencies

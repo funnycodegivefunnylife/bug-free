@@ -1,12 +1,10 @@
 package bugfree.challenge.domain.entities;
 
-/**
- * User status enumeration
- */
+/** User status enumeration */
 public enum UserStatus {
-    ACTIVE,
-    INACTIVE,
-    PENDING,
-    SUSPENDED,
-    DELETED
+  ACTIVE,
+  INACTIVE,
+  PENDING,
+  SUSPENDED,
+  DELETED
 }

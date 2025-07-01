@@ -1,59 +1,58 @@
 package bugfree.challenge.domain.kafka;
 
+import java.util.Optional;
+
 import bugfree.challenge.domain.kafka.data.KafkaEventData;
 import bugfree.challenge.shared.parser.JacksonParser;
-import lombok.extern.slf4j.Slf4j;
-
-import java.util.Optional;
 
 public interface BaseKafkaConsumer<T extends KafkaEventData> {
 
+  BaseKafkaProcessor<T> getProcessor();
 
+  /**
+   * When the event is processed failure, this method will be called.
+   *
+   * @param eventData the event data that failed to process
+   */
+  void fallback(T eventData);
 
-    BaseKafkaProcessor<T> getProcessor();
+  /**
+   * This method will be called before the event is processed.
+   *
+   * @param eventData the event data that will be processed
+   */
+  void afterProcess(T eventData);
 
-    /**
-     * When the event is processed failure, this method will be called.
-     * @param eventData the event data that failed to process
-     */
-    void fallback(T eventData);
+  Class<T> getEventDataClass();
 
-    /**
-     * This method will be called before the event is processed.
-     * @param eventData the event data that will be processed
-     */
-    void afterProcess(T eventData);
-
-    Class<T> getEventDataClass();
-
-    default Optional<T> parseMessage(String message) {
-        try {
-            T data = JacksonParser.fromJson(message, getEventDataClass());
-            return Optional.ofNullable(data);
-        } catch (Exception e) {
-        }
-
-        return Optional.empty();
+  default Optional<T> parseMessage(String message) {
+    try {
+      T data = JacksonParser.fromJson(message, getEventDataClass());
+      return Optional.ofNullable(data);
+    } catch (Exception e) {
     }
 
-    default void consume(String message) {
-        try {
-            Optional<T> eventDataOpt = parseMessage(message);
-            if (eventDataOpt.isPresent()) {
-                T eventData = eventDataOpt.get();
-                boolean result = getProcessor().process(eventData);
-                if (result) {
-                    afterProcess(eventData);
-                } else {
-                    fallback(eventData);
-                }
+    return Optional.empty();
+  }
 
-            } else {
-            }
-        } catch (Exception e) {
-            // Handle processing failure
-            System.err.println("Error processing message: " + message);
-            fallback(null); // Pass null or handle accordingly
+  default void consume(String message) {
+    try {
+      Optional<T> eventDataOpt = parseMessage(message);
+      if (eventDataOpt.isPresent()) {
+        T eventData = eventDataOpt.get();
+        boolean result = getProcessor().process(eventData);
+        if (result) {
+          afterProcess(eventData);
+        } else {
+          fallback(eventData);
         }
+
+      } else {
+      }
+    } catch (Exception e) {
+      // Handle processing failure
+      System.err.println("Error processing message: " + message);
+      fallback(null); // Pass null or handle accordingly
     }
+  }
 }
