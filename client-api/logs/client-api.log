@@ -1,0 +1,91 @@
+2025-06-29 11:00:29 [main] INFO  bugfree.challenge.client_api.MainApplication [request_id=] - Starting MainApplication using Java 17.0.12 with PID 23195 (/Users/lap15723/Desktop/bug-free/client-api/build/classes/java/main started by lap15723 in /Users/lap15723/Desktop/bug-free/client-api)
+2025-06-29 11:00:29 [main] DEBUG bugfree.challenge.client_api.MainApplication [request_id=] - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-06-29 11:00:29 [main] INFO  bugfree.challenge.client_api.MainApplication [request_id=] - No active profile set, falling back to 1 default profile: "default"
+2025-06-29 11:00:29 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [request_id=] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [bugfree.challenge.client_api.MainApplication]
+2025-06-29 11:00:29 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger [request_id=] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-29 11:00:29 [main] ERROR o.s.boot.SpringApplication [request_id=] - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [bugfree.challenge.client_api.MainApplication]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:194)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at bugfree.challenge.client_api.MainApplication.main(MainApplication.java:10)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'application' for bean class [bugfree.challenge.infrastructure.Application] conflicts with existing, non-compatible bean definition of same name and class [bugfree.challenge.domain.Application]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:346)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:281)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:204)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:172)
+	... 13 common frames omitted
+2025-06-29 11:02:40 [main] INFO  bugfree.challenge.client_api.MainApplication [request_id=] - Starting MainApplication using Java 17.0.12 with PID 24748 (/Users/lap15723/Desktop/bug-free/client-api/build/classes/java/main started by lap15723 in /Users/lap15723/Desktop/bug-free/client-api)
+2025-06-29 11:02:40 [main] DEBUG bugfree.challenge.client_api.MainApplication [request_id=] - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-06-29 11:02:40 [main] INFO  bugfree.challenge.client_api.MainApplication [request_id=] - No active profile set, falling back to 1 default profile: "default"
+2025-06-29 11:02:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [request_id=] - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29 11:02:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [request_id=] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-29 11:02:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [request_id=] - Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2025-06-29 11:02:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [request_id=] - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29 11:02:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [request_id=] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-06-29 11:02:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [request_id=] - Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2025-06-29 11:02:41 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [request_id=] - Tomcat initialized with port 8080 (http)
+2025-06-29 11:02:41 [main] INFO  o.a.catalina.core.StandardService [request_id=] - Starting service [Tomcat]
+2025-06-29 11:02:41 [main] INFO  o.a.catalina.core.StandardEngine [request_id=] - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-06-29 11:02:41 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [request_id=] - Initializing Spring embedded WebApplicationContext
+2025-06-29 11:02:41 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [request_id=] - Root WebApplicationContext: initialization completed in 757 ms
+2025-06-29 11:02:41 [main] DEBUG b.c.shared.filter.RequestIdFilter [request_id=] - Filter 'requestIdFilter' configured for use
+2025-06-29 11:02:41 [main] DEBUG bugfree.challenge.client_api.JwtFilter [request_id=] - Filter 'jwtFilter' configured for use
+2025-06-29 11:02:41 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [request_id=] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-06-29 11:02:41 [main] INFO  o.a.catalina.core.StandardService [request_id=] - Stopping service [Tomcat]
+2025-06-29 11:02:41 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger [request_id=] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-29 11:02:41 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter [request_id=] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2025-06-29 11:03:42 [main] INFO  bugfree.challenge.client_api.MainApplication [request_id=] - Starting MainApplication using Java 17.0.12 with PID 25681 (/Users/lap15723/Desktop/bug-free/client-api/build/classes/java/main started by lap15723 in /Users/lap15723/Desktop/bug-free/client-api)
+2025-06-29 11:03:42 [main] DEBUG bugfree.challenge.client_api.MainApplication [request_id=] - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-06-29 11:03:42 [main] INFO  bugfree.challenge.client_api.MainApplication [request_id=] - No active profile set, falling back to 1 default profile: "default"
+2025-06-29 11:03:43 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [request_id=] - Tomcat initialized with port 8080 (http)
+2025-06-29 11:03:43 [main] INFO  o.a.catalina.core.StandardService [request_id=] - Starting service [Tomcat]
+2025-06-29 11:03:43 [main] INFO  o.a.catalina.core.StandardEngine [request_id=] - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-06-29 11:03:43 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [request_id=] - Initializing Spring embedded WebApplicationContext
+2025-06-29 11:03:43 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [request_id=] - Root WebApplicationContext: initialization completed in 841 ms
+2025-06-29 11:03:43 [main] DEBUG b.c.shared.filter.RequestIdFilter [request_id=] - Filter 'requestIdFilter' configured for use
+2025-06-29 11:03:43 [main] DEBUG bugfree.challenge.client_api.JwtFilter [request_id=] - Filter 'jwtFilter' configured for use
+2025-06-29 11:03:44 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean [request_id=] - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-06-29 11:03:44 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [request_id=] - Tomcat started on port 8080 (http) with context path '/'
+2025-06-29 11:03:44 [main] INFO  bugfree.challenge.client_api.MainApplication [request_id=] - Started MainApplication in 2.015 seconds (process running for 2.72)
+2025-06-29 11:04:40 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [request_id=] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-29 11:04:40 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet [request_id=] - Initializing Servlet 'dispatcherServlet'
+2025-06-29 11:04:40 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet [request_id=] - Completed initialization in 3 ms
+2025-06-29 11:04:40 [http-nio-8080-exec-1] DEBUG bugfree.challenge.client_api.JwtFilter [request_id=506fdc6d-eaaa-4c81-be14-9c0786e55c2e] - Processing JWT authentication for request: /api/health
+2025-06-29 11:04:45 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown [request_id=] - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-29 11:04:45 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown [request_id=] - Graceful shutdown complete
